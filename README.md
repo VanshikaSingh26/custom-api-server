@@ -91,6 +91,12 @@ npm start
 
 It will open at http://localhost:3000.
 
+### 5.Run tests:
+bash:
+npm test
+#(For coverage:)
+npm run test:coverage
+
 -------------------
 
 ## 📡 How to Interact with the API
@@ -117,6 +123,15 @@ curl -X DELETE http://localhost:5000/api/users/1
 
 -------------------
 
+## Testing
+
+- **Unit tests:** Located in `tests/unit/`
+- **Integration tests:** Located in `tests/integration/`
+- **API tests:** Located in `tests/api/`
+- **Testing tools:** Jest, Supertest
+
+------------------
+
 ## 📸 Screenshots of API Tests and Server Output
 
 A folder named `Screenshots of running servers and outputs/` has been included in this repository.  
@@ -126,6 +141,7 @@ It contains:
 - Terminal output showing backend server running
 - Sample `curl` command results
 - Frontend view screenshots
+- Screenshot of result of test coverage report
 
 These screenshots serve as visual proof of successful API execution and server setup.
 
@@ -136,6 +152,7 @@ These screenshots serve as visual proof of successful API execution and server s
 ### Database: PostgreSQL
 ### Frontend (Optional): React.js
 ### API Testing: Postman, curl
+### API, Unit and Integration Testing: Jest
 
 ------------------------
 
@@ -150,6 +167,15 @@ custom-api-server/
 ├── README.md
 └── frontend/ (optional React UI)
 └──Screenshots of running servers and outputs
+└──tests/
+│   └──api/
+│     └──userApi.test.js
+│   └──integration/
+│     └──userRoutes.test.js
+│   └──unit/
+│     └──validateUser.test.js
+└──utils/
+│   └──validateUser.js
 
 ----------------------
 
